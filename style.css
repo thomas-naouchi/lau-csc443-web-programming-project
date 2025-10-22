@@ -1,43 +1,106 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: white;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-}
-
-.hero {
   text-align: center;
-  background-color: #f9f9f9;
-  padding: 40px 20px;
+  background: linear-gradient(90deg, #1db954, #1ed760);
+  color: white;
+  padding: 2rem 1rem;
 }
 
-.stats {
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.search-section {
   display: flex;
-  justify-content: space-around;
-  background-color: #ffe6f0;
-  padding: 30px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: #181818;
 }
 
-.stat-box {
-  font-size: 1.5em;
+.search-section input {
+  width: 300px;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-section button {
+  background-color: #1db954;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
+  color: white;
+}
+
+.search-section button:hover {
+  background-color: #1ed760;
+}
+
+/* Statistics section */
+.stats-section {
+  padding: 2rem;
+  background-color: #202020;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Charts section */
+.charts-section {
+  padding: 2rem;
+  background-color: #181818;
+}
+
+.chart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.chart {
+  background-color: #2b2b2b;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #101010;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #1db954;
+  text-decoration: none;
 }

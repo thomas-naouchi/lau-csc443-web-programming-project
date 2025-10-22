@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rotaract Dashboard (Draft Layout)</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Insights Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Rotaract Kesrouan</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Who Are We?</a></li>
-        <li><a href="#">Merch</a></li>
-        <li><a href="#">Club Leadership</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Upcoming Events</a></li>
-        <li><a href="#">Get Involved</a></li>
-      </ul>
-    </nav>
+    <h1>Music Insights Dashboard</h1>
+    <p>Explore data and trends from your favorite artists and playlists.</p>
   </header>
 
-  <section class="hero">
-    <p><em>Rotaract Kesrouan is a vibrant community of young leaders</em></p>
+  <section class="search-section">
+    <input type="text" id="searchInput" placeholder="Search for an artist or playlist..." />
+    <button id="searchBtn">Search</button>
   </section>
 
-  <section class="stats">
-    <div class="stat-box">39+ Years of Legacy</div>
-    <div class="stat-box">1000+ Projects</div>
-    <div class="stat-box">20+ Awards</div>
+  <section class="stats-section">
+    <h2>Summary Statistics</h2>
+    <div class="stats-grid">
+      <div class="stat-card">Average Tempo: <span>-</span></div>
+      <div class="stat-card">Average Energy: <span>-</span></div>
+      <div class="stat-card">Average Danceability: <span>-</span></div>
+      <div class="stat-card">Average Popularity: <span>-</span></div>
+    </div>
+  </section>
+
+  <section class="charts-section">
+    <h2>Audio Features</h2>
+    <div class="chart-container">
+      <div class="chart" id="chart1">Chart 1 (e.g., Energy vs Danceability)</div>
+      <div class="chart" id="chart2">Chart 2 (e.g., Tempo vs Popularity)</div>
+      <div class="chart" id="chart3">Chart 3 (e.g., Radar or Pie Chart)</div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Rotaract Kesrouan</p>
+    <p>Data provided by <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify Web API</a></p>
   </footer>
 </body>
 </html>

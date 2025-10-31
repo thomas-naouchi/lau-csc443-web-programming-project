@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music Insights Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Data Viewer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Music Insights Dashboard</h1>
-    <p>Explore data and trends from your favorite artists and playlists.</p>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>GitHub Data Viewer</h1>
   </header>
 
-  <section class="search-section">
-    <input type="text" id="searchInput" placeholder="Search for an artist or playlist..." />
-    <button id="searchBtn">Search</button>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+    <!-- LEFT SECTION: User Info -->
+    <section class="user-section">
+      <h2>User Profile</h2>
+      <div class="user-card">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="User avatar">
+        <p><strong>Username:</strong> octocat</p>
+        <p><strong>Followers:</strong> 100</p>
+        <p><strong>Following:</strong> 50</p>
+      </div>
+    </section>
 
-  <section class="stats-section">
-    <h2>Summary Statistics</h2>
-    <div class="stats-grid">
-      <div class="stat-card">Average Tempo: <span>-</span></div>
-      <div class="stat-card">Average Energy: <span>-</span></div>
-      <div class="stat-card">Average Danceability: <span>-</span></div>
-      <div class="stat-card">Average Popularity: <span>-</span></div>
-    </div>
-  </section>
+    <!-- RIGHT SECTION: Repository List -->
+    <section class="repo-section">
+      <h2>Repositories</h2>
+      <div class="repo-list">
+        <div class="repo-card">
+          <h3>repo1</h3>
+          <p>Stars: 25 | Forks: 10</p>
+        </div>
+        <div class="repo-card">
+          <h3>repo2</h3>
+          <p>Stars: 40 | Forks: 5</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <section class="charts-section">
-    <h2>Audio Features</h2>
-    <div class="chart-container">
-      <div class="chart" id="chart1">Chart 1 (e.g., Energy vs Danceability)</div>
-      <div class="chart" id="chart2">Chart 2 (e.g., Tempo vs Popularity)</div>
-      <div class="chart" id="chart3">Chart 3 (e.g., Radar or Pie Chart)</div>
-    </div>
-  </section>
-
-  <footer>
-    <p>Data provided by <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify Web API</a></p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made using the GitHub API</p>
   </footer>
 </body>
 </html>

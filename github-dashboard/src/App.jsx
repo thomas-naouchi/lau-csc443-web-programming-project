@@ -1,33 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './githubStyles.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* HEADER */}
+      <header className="header">
+        <h1>GitHub Data Viewer</h1>
+      </header>
+
+      {/* MAIN CONTENT */}
+      <main className="main-container">
+        {/* LEFT SECTION: User Info */}
+        <section className="user-section">
+          <h2>User Profile</h2>
+          <div className="user-card">
+            <img
+              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              alt="User avatar"
+            />
+            <p>
+              <strong>Username:</strong> octocat
+            </p>
+            <p>
+              <strong>Followers:</strong> 100
+            </p>
+            <p>
+              <strong>Following:</strong> 50
+            </p>
+          </div>
+        </section>
+
+        {/* RIGHT SECTION: Repository List */}
+        <section className="repo-section">
+          <h2>Repositories</h2>
+          <div className="repo-list">
+            <div className="repo-card">
+              <h3>repo1</h3>
+              <p>Stars: 25 | Forks: 10</p>
+            </div>
+            <div className="repo-card">
+              <h3>repo2</h3>
+              <p>Stars: 40 | Forks: 5</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <p>Made using the GitHub API</p>
+      </footer>
     </>
   )
 }

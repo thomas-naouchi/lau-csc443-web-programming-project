@@ -1,6 +1,10 @@
-import './githubStyles.css'
+import Repos from './components/Repos';
+import './githubStyles.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [repoMeta, setRepoMeta] = useState('');
+
   return (
     <>
       {/* HEADER */}
@@ -30,7 +34,7 @@ function App() {
           </div>
         </section>
 
-        {/* RIGHT SECTION: Repository List */}
+        {/* RIGHT SECTION: Repository List + Fetch Button */}
         <section className="repo-section">
           <h2>Repositories</h2>
           <div className="repo-list">
@@ -43,6 +47,17 @@ function App() {
               <p>Stars: 40 | Forks: 5</p>
             </div>
           </div>
+          {/* Add fetch button and metadata display */}
+          <div style={{ marginTop: '2rem' }}>
+            {repoMeta && (
+              <textarea
+                style={{ width: '100%', minHeight: '200px', marginTop: '1rem' }}
+                value={repoMeta}
+                readOnly
+              />
+            )}
+          </div>
+          <Repos></Repos>
         </section>
       </main>
 
@@ -51,7 +66,7 @@ function App() {
         <p>Made using the GitHub API</p>
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

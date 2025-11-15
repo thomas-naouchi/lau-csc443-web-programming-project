@@ -1,4 +1,4 @@
-function UserProfileCard() {
+function UserCard() {
   return (
     <div className="user-card">
       <img
@@ -18,4 +18,4 @@ function UserProfileCard() {
   );
 }
 
-export default UserProfileCard;
+export default UserCard;

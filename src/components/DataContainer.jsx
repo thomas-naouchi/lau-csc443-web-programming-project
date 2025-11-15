@@ -1,7 +1,7 @@
 import UserSection from "./UserSection";
 import Repositories from "./Repositories";
 
-function DataGrid() {
+function DataContainer() {
   return (
     <div className = "data-container">
         <UserSection />
@@ -10,4 +10,4 @@ function DataGrid() {
   );
 }
 
-export default DataGrid;
+export default DataContainer;

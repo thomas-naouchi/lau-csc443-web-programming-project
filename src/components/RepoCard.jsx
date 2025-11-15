@@ -1,3 +1,9 @@
+// interface RepoCardProps {
+//   name: string;
+//   stars: number;
+//   forks: number;
+// }
+
 function RepoCard() {
   return (
     <>

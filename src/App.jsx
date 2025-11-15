@@ -1,25 +1,24 @@
-import Header from "./components/Header";
-import UserSection from "./components/UserSection";
-import Repositories from "./components/Repositories";
-import DataGrid from "./components/DataGrid";
-import SearchBar from "./components/SearchBar";
-// import './githubStyles.css';
 import React, { useState } from "react";
+
+import Header from "./components/Header";
+import MainContainer from "./components/MainContainer";
+import Footer from "./components/Footer";
 
 function App() {
   const [repoMeta, setRepoMeta] = useState("");
 
   return (
     <>
-      <Header />
+      <header className="header">
+        <Header />
+      </header>
 
       <main className="main-container">
-        <SearchBar />
-        <DataGrid />
+        <MainContainer />
       </main>
 
       <footer className="footer">
-        <p>Made using the GitHub API</p>
+        <Footer />
       </footer>
     </>
   );

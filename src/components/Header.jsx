@@ -1,9 +1,5 @@
 function Header() {
-  return (
-    <header className="header">
-      <h1>GitHub Data Viewer</h1>
-    </header>
-  );
+  return <h1>GitHub Data Viewer</h1>;
 }
 
 export default Header;

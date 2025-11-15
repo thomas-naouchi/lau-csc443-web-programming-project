@@ -1,10 +1,16 @@
-import RepoList from "./RepoList";
+import RepoCard from "./RepoCard";
+
+// interface RepositoriesProps {
+//   repoCardProps: RepoCardProps
+// }
 
 function Repositories() {
   return (
     <section className="repo-section">
       <h2>Repositories</h2>
-      <RepoList />
+      <div className="repo-list">
+        <RepoCard />
+      </div>
     </section>
   );
 }

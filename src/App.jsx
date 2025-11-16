@@ -5,7 +5,7 @@ import MainContainer from "./components/MainContainer";
 import Footer from "./components/Footer";
 
 function App() {
-  const [repoMeta, setRepoMeta] = useState("");
+  const [githubUser, setGithubUser] = useState("");
 
   return (
     <>
@@ -14,7 +14,7 @@ function App() {
       </header>
 
       <main className="main-container">
-        <MainContainer />
+        <MainContainer githubUser={githubUser} setGithubUser={setGithubUser}/>
       </main>
 
       <footer className="footer">

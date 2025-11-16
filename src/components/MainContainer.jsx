@@ -1,10 +1,10 @@
 import SearchBar from "./SearchBar";
 import DataContainer from "./DataContainer";
 
-function MainContainer() {
+function MainContainer({ githubUser, setGithubUser }) {
   return (
     <>
-      <SearchBar />
+      <SearchBar githubUser={githubUser} setGithubUser={setGithubUser} />
       <DataContainer />
     </>
   );

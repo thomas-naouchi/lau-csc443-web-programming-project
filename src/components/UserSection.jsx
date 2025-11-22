@@ -4,24 +4,24 @@
 //   following: number;
 // }
 
-function UserSection() {
+function UserSection({ githubUser }) {
   return (
     <section className="user-section">
       <h2>User Section</h2>
 
       <div className="user-card">
         <img
-          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          src={githubUser.avatar_url || "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"}
           alt="User avatar"
         />
         <p>
-          <strong>Username:</strong> octocat
+          <strong>Name:</strong> {githubUser.name}
         </p>
         <p>
-          <strong>Followers:</strong> 100
+          <strong>Followers:</strong> {githubUser.followers}
         </p>
         <p>
-          <strong>Following:</strong> 50
+          <strong>Following:</strong> {githubUser.following}
         </p>
       </div>
     </section>

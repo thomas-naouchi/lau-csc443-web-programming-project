@@ -4,16 +4,20 @@
 //   forks: number;
 // }
 
-function RepoCard() {
+function RepoCard({ id, name, description, url }) {
   return (
     <>
       <div className="repo-card">
-        <h3>repo1</h3>
-        <p>Stars: 25 | Forks: 10</p>
-      </div>
-      <div className="repo-card">
-        <h3>repo2</h3>
-        <p>Stars: 40 | Forks: 5</p>
+        <h3>{name}</h3>
+        <p>
+          <strong>ID : </strong> {id}
+        </p>
+        <p>
+          <strong>Description : </strong> {description}
+        </p>
+        <p>
+          <strong>URL : </strong> <a href={url}>{url}</a>
+        </p>
       </div>
     </>
   );

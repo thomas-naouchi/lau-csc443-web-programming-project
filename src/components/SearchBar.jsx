@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 function SearchBar({ githubUser, setGithubUser }) {
   const [inputValue, setInputValue] = useState("");
+  const [btnClassName, setBtnClassName] = useState("btn btn-success");
+  const [inputPlaceholder, setInputPlaceholder] = useState("Search for a GitHub user...");
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -17,7 +19,11 @@ function SearchBar({ githubUser, setGithubUser }) {
           const data = await response.json();
           console.log(data);
           setGithubUser(data);
+          setBtnClassName("btn btn-success");
+          setInputPlaceholder("Search for a GitHub user...");
         } else {
+          setInputPlaceholder("User not found. Try again...");
+          setBtnClassName("btn btn-danger");
           throw new Error("Failed to fetch data");
         }
       } catch (error) {
@@ -33,10 +39,10 @@ function SearchBar({ githubUser, setGithubUser }) {
         className="form-control me-2"
         type="search"
         onChange={handleChange}
-        placeholder="Search for a GitHub user..."
+        placeholder={inputPlaceholder}
         aria-label="Search"
       />
-      <button className="btn btn-outline-success" type="submit">
+      <button className={btnClassName} type="submit">
         Search
       </button>
     </form>

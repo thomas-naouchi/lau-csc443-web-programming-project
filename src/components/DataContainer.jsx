@@ -1,11 +1,11 @@
 import UserSection from "./UserSection";
 import Repositories from "./Repositories";
 
-function DataContainer() {
+function DataContainer({ githubUser}) {
   return (
     <div className = "data-container">
-        <UserSection />
-        <Repositories />
+        <UserSection githubUser={githubUser} />
+        <Repositories githubUser={githubUser} />
     </div>
   );
 }

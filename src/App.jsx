@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import Footer from "./components/Footer";
 
 function App() {
-  const [githubUser, setGithubUser] = useState("");
+  
 
   return (
     <>
@@ -14,7 +12,7 @@ function App() {
       </header>
 
       <main className="main-container">
-        <MainContainer githubUser={githubUser} setGithubUser={setGithubUser}/>
+        <MainContainer/>
       </main>
 
       <footer className="footer">

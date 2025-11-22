@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import RepoCard from "./RepoCard";
+import RepoGraph from "./RepoGraph";
 
 function Repositories({ githubUser }) {
   const [repos, setRepos] = useState([]);
@@ -25,14 +26,23 @@ function Repositories({ githubUser }) {
 
   return (
     <section className="repo-section">
-      <h2>Repositories 
-        {githubUser && githubUser.login && typeof githubUser.public_repos === "number" 
-          ? `(${githubUser.public_repos})` 
+      <h2>
+        Repositories
+        {githubUser &&
+        githubUser.login &&
+        typeof githubUser.public_repos === "number"
+          ? `(${githubUser.public_repos})`
           : " (search for a user)"}
       </h2>
+
+      <div>
+        <RepoGraph repos={repos} />
+      </div>
+
       <div className="repo-list">
         {repos.map((repo) => (
           <RepoCard
+            size={repo.size}
             name={repo.name}
             id={repo.id}
             description={repo.description}
